@@ -55,7 +55,7 @@ hdfs dfs -put /tp-map-reduce/InputData.csv /tp-map-reduce/InputData.csv
 
 ### Run the MapReduce application
 ```bash
-hadoop jar tp-map-reduce/map-reduce-tp-1.0-SNAPSHOT.jar WordCount /tp-map-reduce/InputData.csv /tp-map-reduce/output.txt
+hadoop jar tp-map-reduce/map-reduce-tp-1.0-SNAPSHOT.jar Runner /tp-map-reduce/InputData.csv /tp-map-reduce/out
 ```
 
 The application calculate the total number of missing values for the Country column of the csv file.

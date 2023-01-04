@@ -9,10 +9,10 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-public class WordCount extends Configured implements Tool {
+public class Runner extends Configured implements Tool {
 
   public static void main(String[] args) throws Exception {
-    int exitCode = ToolRunner.run(new WordCount(), args);
+    int exitCode = ToolRunner.run(new Runner(), args);
     System.exit(exitCode);
   }
 
@@ -25,15 +25,15 @@ public class WordCount extends Configured implements Tool {
       return -1;
     }
     Job job = new org.apache.hadoop.mapreduce.Job();
-    job.setJarByClass(WordCount.class);
-    job.setJobName("WordCounter");
+    job.setJarByClass(Runner.class);
+    job.setJobName("MissingValuesCounter");
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
     job.setOutputFormatClass(TextOutputFormat.class);
-    job.setMapperClass(WordCountMapper.class);
-    job.setReducerClass(WordCountReducer.class);
+    job.setMapperClass(MissingValuesMapper.class);
+    job.setReducerClass(Reducer.class);
     int returnValue = job.waitForCompletion(true) ? 0 : 1;
     System.out.println("job.isSuccessful " + job.isSuccessful());
     return returnValue;
