@@ -1,3 +1,6 @@
+<img width="60%" alt="hadoop-logo" src="https://user-images.githubusercontent.com/65605546/210665636-9ec1e0ab-ba50-47b1-a432-a46126867c1b.png">
+
+
 ## MapReduce job 
 
 The objective of this project is setting up an Hadoop cluster locally 
@@ -61,18 +64,18 @@ hadoop jar tp-map-reduce/map-reduce-tp-1.0-SNAPSHOT.jar Runner /tp-map-reduce/In
 The application calculate the total number of missing values for the Country column of the csv file.
 Once the calculation is done, the result is written in HDFS in /tp-map-reduce/out
 
-<img width="100%" alt="Capture d’écran 2023-01-04 à 22 12 08" src="https://user-images.githubusercontent.com/65605546/210663713-c914f524-d3c1-406a-a15d-8df9e006e14c.png">
+<img width="100%" alt="result-ui" src="https://user-images.githubusercontent.com/65605546/210663713-c914f524-d3c1-406a-a15d-8df9e006e14c.png">
 
 It appears there is no missing values for the Country column. 
-<img width="100%" alt="Capture d’écran 2023-01-04 à 22 10 21" src="https://user-images.githubusercontent.com/65605546/210663793-a9710c12-df2e-4919-b2d5-8ee54b288bcd.png">
+<img width="100%" alt="result-terminal" src="https://user-images.githubusercontent.com/65605546/210663793-a9710c12-df2e-4919-b2d5-8ee54b288bcd.png">
 
 
 This also can be verified using Python:
-<img width="100%" alt="Capture d’écran 2023-01-04 à 23 44 32" src="https://user-images.githubusercontent.com/65605546/210664091-45a0e29b-4943-4a5a-bb07-738c16468e14.png">
+<img width="100%" alt="check-python" src="https://user-images.githubusercontent.com/65605546/210664091-45a0e29b-4943-4a5a-bb07-738c16468e14.png">
 
 
 ### Total number of characters in the Country column
 Given there was no missing values for the Country column and I wanted to see the result of an aggregation using MapReduce I made another MapReduce application that calculate the total number of characters in the Country column.  
 In order to achieve that I developed another Mapper (WordCountMapper), the reducer remains the same.  
-<img width="100%" alt="Capture d’écran 2023-01-04 à 22 25 42" src="https://user-images.githubusercontent.com/65605546/210664262-2f553a80-fb01-4363-8c1a-9741503fe7c6.png">
+<img width="100%" alt="second-result-terminal" src="https://user-images.githubusercontent.com/65605546/210664262-2f553a80-fb01-4363-8c1a-9741503fe7c6.png">
 
