@@ -72,6 +72,7 @@ This also can be verified using Python:
 
 
 ### Total number of characters in the Country column
-Given there was no missing values for the Country column and I wanted to see the result of an aggregation using MapReduce I made another MapReduce application that calculate the total number of characters in the Country column. 
+Given there was no missing values for the Country column and I wanted to see the result of an aggregation using MapReduce I made another MapReduce application that calculate the total number of characters in the Country column.  
+In order to achieve that I developed another Mapper (WordCountMapper), the reducer remains the same.  
 <img width="100%" alt="Capture d’écran 2023-01-04 à 22 25 42" src="https://user-images.githubusercontent.com/65605546/210664262-2f553a80-fb01-4363-8c1a-9741503fe7c6.png">
 
